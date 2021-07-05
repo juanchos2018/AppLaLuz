@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorfondo"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/fl_tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/atma_medium"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Bienvenido"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/fl_iv_logo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/fl_iv_logo"
+        android:layout_width="219dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/fl_iv_logo"
+        android:src="@drawable/logoclinicaluz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/fl_ll_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:alpha="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_tv_login">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fl_til_como"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/fl_til_como"
+            app:boxCornerRadiusTopStart="4dp"
+            app:boxCornerRadiusTopEnd="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/fl_mactv_como"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/fl_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:drawableStart="@drawable/ic_person"
+            android:hint="@string/fl_et_email"
+            style="@style/Theme.CLL.EditText"
+            android:inputType="textEmailAddress"
+            android:text="katmq@upt.pe" />
+
+        <EditText
+            android:id="@+id/fl_et_contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/fl_et_contrasena"
+            style="@style/Theme.CLL.EditText"
+            android:inputType="textPassword"
+            android:text="Admin123" />
+
+        <Button
+            android:id="@+id/fl_b_login"
+            style="@style/Widget.CLL.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/fl_b_login"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fl_mb_olvido"
+        style="@style/Widget.CLL.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="1"
+        android:text="@string/fl_tv_olvido"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_ll_cont" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fl_mb_registrarse"
+        style="@style/Widget.CLL.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/fl_tv_registrarse"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_mb_olvido" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

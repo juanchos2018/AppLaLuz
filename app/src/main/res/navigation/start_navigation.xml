@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/start_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="tech.abralica.clinicalaluzapp.ui.start.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_rememberActivity"
+            app:destination="@id/rememberFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_personalDataFragment"
+            app:destination="@id/personalDataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="tech.abralica.clinicalaluzapp.ui.start.SignUpFragment"
+        android:label="Registrarse"
+        tools:layout="@layout/fragment_signup_user">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rememberFragment"
+        android:name="tech.abralica.clinicalaluzapp.ui.start.RememberFragment"
+        android:label="Remember"
+        tools:layout="@layout/fragment_start_remember">
+        <action
+            android:id="@+id/action_rememberActivity_to_passwordActivity"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="tech.abralica.clinicalaluzapp.ui.start.PasswordFragment"
+        android:label="Password"
+        tools:layout="@layout/fragment_start_password">
+        <action
+            android:id="@+id/action_passwordActivity_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="tech.abralica.clinicalaluzapp.ui.start.PersonalDataFragment"
+        android:label="fragment_personal_data"
+        tools:layout="@layout/fragment_signup_persona" >
+        <action
+            android:id="@+id/action_personalDataFragment_to_datosPacienteFragment"
+            app:destination="@id/datosPacienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datosPacienteFragment"
+        android:name="tech.abralica.clinicalaluzapp.ui.start.DatosPacienteFragment"
+        android:label="fragment_datos_paciente"
+        tools:layout="@layout/fragment_signup_paciente" >
+        <action
+            android:id="@+id/action_datosPacienteFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+
+</navigation>

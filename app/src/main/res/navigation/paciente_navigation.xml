@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home_paciente">
+
+    <fragment
+        android:id="@+id/nav_home_paciente"
+        android:name="tech.abralica.clinicalaluzapp.ui.paciente.PacienteHomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home_paciente" >
+        <action
+            android:id="@+id/action_home_fragment_to_reservarEspFragment"
+            app:destination="@id/nav_reservar_esp" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_gestionar_citas_f"
+        android:name="tech.abralica.clinicalaluzapp.ui.paciente.GestionarCitasFragment"
+        android:label="Citas médicas"
+        tools:layout="@layout/fragment_gestionar_citas" />
+    <fragment
+        android:id="@+id/nav_historial_f"
+        android:name="tech.abralica.clinicalaluzapp.ui.HistorialFragment"
+        android:label="Historial médico"
+        tools:layout="@layout/fragment_main_historial" />
+    <fragment
+        android:id="@+id/nav_ubicanos"
+        android:name="tech.abralica.clinicalaluzapp.ui.UbicanosFragment"
+        android:label="Ubícanos"
+        tools:layout="@layout/fragment_main_ubicanos" />
+    <fragment
+        android:id="@+id/nav_reservar_esp"
+        android:name="tech.abralica.clinicalaluzapp.ui.paciente.ReservarEspFragment"
+        android:label="Elegir especialidad"
+        tools:layout="@layout/fragment_reservar_esp" >
+        <action
+            android:id="@+id/action_reservarEspFragment_to_reservarDatetimeFragment"
+            app:destination="@id/nav_reservar_datetime" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_reservar_datetime"
+        android:name="tech.abralica.clinicalaluzapp.ui.paciente.ReservarDatetimeFragment"
+        android:label="Elegir fecha y hora"
+        tools:layout="@layout/fragment_reservar_datetime" >
+        <action
+            android:id="@+id/action_reservarDatetimeFragment_to_reservarMedicoFragment"
+            app:destination="@id/nav_reservar_medico" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_reservar_medico"
+        android:name="tech.abralica.clinicalaluzapp.ui.paciente.ReservarMedicoFragment"
+        android:label="Elegir médico"
+        tools:layout="@layout/fragment_reservar_medic" />
+</navigation>

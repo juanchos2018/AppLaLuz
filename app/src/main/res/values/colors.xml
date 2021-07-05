@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="colorPrimary">#a42a25</color>
+    <color name="colorPrimaryDark">#6e0000</color>
+    <color name="colorfondo">#960018</color>
+    <color name="colorfondo2">#5dc1b9</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="textColorPrimary">#707271</color>
+    <color name="toolbarIconColor">#ffffff</color>
+    <color name="textColorSecondary">#ffffff</color>
+    <color name="backgroundColor">#ffffff</color>
+    <color name="loginPageBackgroundColor">@color/backgroundColor</color>
+    <color name="mainMenuBackgroundColor">@color/backgroundColor</color>
+    <color name="textInputOutlineColor">@color/colorAccent</color>
+    <color name="blue_link">#257df1</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="nuevo">#1d1d27</color>
+    <color name="textHeadline">#434343</color>
+    <color name="textDescription">#686868</color>
+    <color name="lightGrey">#EAEAEA</color>
+
+
+    <color name="bgAzul">#3B1FE6</color>
+    <color name="bgRojo">#EB0A1D</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="color_yelow">#e5be01</color>
+    <color name="gray">#c7c7c7</color>
+
+    <color name="bgVerde">#08B34F</color>
+    <color name="bgAmarillo">#ECAE27</color>
+    <!--<color name="bgAzul">#0569C3</color>-->
+
+
+</resources>

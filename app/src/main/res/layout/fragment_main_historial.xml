@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HistorialFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/historial"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estatura:"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Headline"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="172cm"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Headline"/>
+
+</androidx.core.widget.NestedScrollView>

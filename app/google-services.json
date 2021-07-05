@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "545363535394",
+    "firebase_url": "https://fir-test-69d8e-default-rtdb.firebaseio.com",
+    "project_id": "fir-test-69d8e",
+    "storage_bucket": "fir-test-69d8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545363535394:android:ff44edc386c39566208c7b",
+        "android_client_info": {
+          "package_name": "com.example.clinicalaluzpaciente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545363535394-afbekors98jcd9vco1fk9dr79s66b8ek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clinicalaluzpaciente",
+            "certificate_hash": "1db244471a9f2e76f3744199669b29d697ace86c"
+          }
+        },
+        {
+          "client_id": "545363535394-iiblhegmom98892d33ihbbur27ks4l4b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clinicalaluzpaciente",
+            "certificate_hash": "d2fc0b057ee53cb2d4bab27c827fdd71e57617bb"
+          }
+        },
+        {
+          "client_id": "545363535394-6grakm9c25uev0ig4qvnfdjto4hikuct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVq0txmj4DTVG3m-PM01uBJSONOgOjjvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545363535394-6grakm9c25uev0ig4qvnfdjto4hikuct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545363535394:android:6277c9b6000356e3208c7b",
+        "android_client_info": {
+          "package_name": "tech.abralica.clinicalaluzapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545363535394-3ngei3bqjvjc8neuhp5jhdnseq3n8ksg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.abralica.clinicalaluzapp",
+            "certificate_hash": "1db244471a9f2e76f3744199669b29d697ace86c"
+          }
+        },
+        {
+          "client_id": "545363535394-6grakm9c25uev0ig4qvnfdjto4hikuct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVq0txmj4DTVG3m-PM01uBJSONOgOjjvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545363535394-6grakm9c25uev0ig4qvnfdjto4hikuct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.actiity.ReservarCitaActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            >
+            <Button
+                android:id="@+id/btnfinish"
+                android:gravity="left"
+                android:text="X"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+            <TextView
+
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#FFFF"
+                android:fontFamily="@font/atma_medium"
+                android:text="Reserver Cita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/fechaseleccionada"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:hint="Elegir Fecha"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/ib_obtener_fecha2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/et_mostrar_fecha_picker"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.505"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/horaselecionada"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/atma_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <Button
+        android:id="@+id/btnreservar"
+        android:textColor="@color/colorBackground"
+        android:background="@drawable/btn_borde3"
+        android:text="Reservar"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:layout_width="150dp"
+        android:layout_height="40dp">
+    </Button>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.10dp"
+        android:background="@color/gray" />
+    <TextView
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/atma_medium"
+        android:text="Horas Disponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerhorarios2"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:checkableBehavior="single"  >
+        <item
+            android:id="@+id/nav_inicio_medico"
+            android:icon="@drawable/outline_home_24"
+            android:title="@string/menu_inicio" />
+        <item
+            android:id="@+id/nav_citas"
+            android:icon="@drawable/citas64"
+            android:title="@string/menu_citas" />
+        <item
+            android:id="@+id/nav_historial"
+            android:icon="@drawable/citas64"
+            android:title="Historial" />
+
+        <item
+            android:id="@+id/nav_perfilmedico"
+            android:icon="@drawable/citas64"
+            android:title="Perfil" />
+</menu>

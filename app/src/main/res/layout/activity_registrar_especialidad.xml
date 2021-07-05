@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.admin.RegistrarEspecialidadActivity">
+
+
+
+    <ImageView
+        android:id="@+id/fe_iv_imagen"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_menu_gallery"
+        android:contentDescription="@string/fe_iv_imagen" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fe_mb_elegir"
+        style="@style/Widget.CLL.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fe_mb_elegir" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fe_til_nombre"
+        style="@style/Widget.CLL.TextInputLayout"
+        android:fontFamily="@font/atma_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/fe_til_nombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fe_tiet_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fe_til_desc"
+        style="@style/Widget.CLL.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/fe_til_desc">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fe_tiet_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/fe_pb_barra"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fe_mb_registrar"
+        style="@style/Widget.CLL.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fe_mb_registrar" />
+
+
+</LinearLayout>

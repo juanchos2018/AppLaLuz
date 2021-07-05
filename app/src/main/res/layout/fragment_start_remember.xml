@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorfondo"
+    tools:context=".RememberActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="192dp"
+            android:layout_height="96dp"
+            android:background="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            app:srcCompat="@drawable/logo"
+            android:contentDescription="@string/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember_desc"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/amarante"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.CLL.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="16dp"
+                android:textStyle="italic"
+                android:background="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/remember_send_button"
+            style="@style/Widget.CLL.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_enviar" />
+
+    </LinearLayout>
+</ScrollView>

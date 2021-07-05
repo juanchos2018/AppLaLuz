@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.paciente.ReservarEspFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:fontFamily="@font/atma_medium"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:text="Elija una especialidad"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/input_1">
+
+                <cn.zhaiyifan.rememberedittext.RememberEditText
+                    android:id="@+id/txtbuscarespecialidad"
+                    android:layout_marginEnd="01dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/atma_medium"
+                    android:layout_alignParentTop="true"
+                    android:hint="Buscar "
+                    android:inputType="textCapWords"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="10dp"
+                    app:autoFill="false"
+                    app:autoSave="true"
+                    app:rememberId="searchText"
+                    app:rememberCount="5"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:background="@drawable/input_1"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/doc1"
+            android:id="@+id/imgmedico"
+            android:layout_gravity="bottom"
+            android:layout_width="120dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="120dp">
+        </ImageView>
+    </LinearLayout>
+
+    <TextView
+        android:text="Elija una especialidad"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp" />
+
+</LinearLayout>

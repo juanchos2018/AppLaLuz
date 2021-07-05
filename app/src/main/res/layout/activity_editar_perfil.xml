@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.medico.EditarPerfil">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:id="@+id/idimgfotoperfil"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp">
+
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/idbtnfotoperfil"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/btn_edit_borde"
+                    android:drawableLeft="@drawable/ic_clip"
+                    android:paddingLeft="15dp"
+                    android:text="Foto"
+                    android:textColor="#FFFFFF">
+
+                </Button>
+                <ProgressBar
+                    android:id="@+id/fe_pb_barra"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="80dp">
+                    <TextView
+                        android:fontFamily="@font/atma_regular"
+                        android:text="Informacion"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombres"></TextView>
+
+                    <EditText
+                        android:id="@+id/idnombresprofesor1"
+                        android:hint="nombres (requerido)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apellidos"></TextView>
+
+                    <EditText
+                        android:hint="apellidos (requerido)"
+                        android:id="@+id/idapellidoprofesor1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Numero Telefono"></TextView>
+
+                    <EditText
+                        android:id="@+id/idtelefonoprofesor1"
+                        android:hint="telefono (requerido)"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/idbotonregistrardatos"
+            android:text="Guardar"
+            android:layout_width="match_parent"
+            android:background="@color/bgVerde"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

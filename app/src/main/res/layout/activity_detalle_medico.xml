@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.actiity.DetalleMedicoActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            >
+            <Button
+                android:id="@+id/btnfinish"
+                android:gravity="left"
+                android:text="X"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+            <TextView
+
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#FFFF"
+                android:fontFamily="@font/atma_medium"
+                android:text="Medico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:paddingLeft="8dp"
+            android:background="@color/bgVerde"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                >
+
+                <!--   aqui va la imagen -->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp">
+                    <ImageView
+                        android:id="@+id/imgperfil"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp">
+
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/nombremedico"
+                        android:textColor="#FFFF"
+                        android:textSize="20sp"
+                        android:text="fdefdfdfdfdfd"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/atma_medium"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvcorreo"
+                        android:textColor="#FFFF"
+                        android:textSize="16sp"
+                        android:text="fdefdfdfdfdfd"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/atma_medium"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tvtelrfono"
+                        android:textColor="#FFFF"
+                        android:textSize="16sp"
+                        android:text="97028/45454"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/atma_medium"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btnnuevacita"
+                        android:textColor="@color/colorBackground"
+                        android:background="@drawable/btn_borde3"
+                        android:text="Nueva Cita"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp">
+
+                    </Button>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RatingBar
+                android:id="@+id/listitemrating"
+                style="@android:attr/ratingBarStyleSmall"
+                android:layout_width="201dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:isIndicator="true"
+                android:max="5"
+                android:rating="3"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+
+            <cn.zhaiyifan.rememberedittext.RememberEditText
+                android:id="@+id/txtcomentario"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/atma_medium"
+                android:hint="Escribe tu cometario "
+                android:inputType="textCapWords"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+
+                android:background="@drawable/bordetxt"
+                app:autoSave="true"
+                app:rememberCount="5"
+                app:rememberId="searchText"
+
+                />
+
+            <Button
+                android:id="@+id/btnpublicar"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/btn_edit_borde"
+                android:layout_gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Publicar"
+                android:textColor="#FFFFFF">
+            </Button>
+            <TextView
+                android:textStyle="bold"
+                android:text="Comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.10dp"
+            android:background="@color/gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/recylercomentario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
