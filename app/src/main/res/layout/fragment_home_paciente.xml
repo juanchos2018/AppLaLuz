@@ -36,29 +36,39 @@
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="16dp"
                     app:srcCompat="@drawable/fotodoctor" />
-
-                <com.airbnb.lottie.LottieAnimationView
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="1dp"
-                    android:id="@+id/animessage"
-                    android:clickable="true"
-                    android:layout_width="170dp"
-                    android:layout_height="150dp"
-                    app:lottie_rawRes="@raw/messageotro"/>
-
-                <TextView
-                    android:layout_below="@id/animessage"
-                    android:id="@+id/home_tv_paciente"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/atma_medium"
-                    android:text="Bienvenido"
-                     />
+                    android:layout_height="wrap_content">
+                    <com.airbnb.lottie.LottieAnimationView
+
+                        android:layout_marginTop="1dp"
+                        android:id="@+id/animessage"
+                        android:clickable="true"
+                        android:layout_width="170dp"
+                        android:layout_height="150dp"
+                        app:lottie_rawRes="@raw/messageotro"/>
+
+                    <TextView
+                       android:layout_marginLeft="25dp"
+                        android:layout_below="@id/animessage"
+                        android:id="@+id/home_tv_paciente"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/atma_medium"
+                        android:text="Bienvenido"
+                        />
+                </LinearLayout>
+
+
+
             </FrameLayout>
+
         </LinearLayout>
     <LinearLayout
         android:id="@+id/symptomsView"

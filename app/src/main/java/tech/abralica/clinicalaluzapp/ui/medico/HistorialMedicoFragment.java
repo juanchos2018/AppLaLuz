@@ -1,6 +1,9 @@
 package tech.abralica.clinicalaluzapp.ui.medico;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,7 +16,9 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -66,7 +71,8 @@ public class HistorialMedicoFragment extends Fragment {
 
     public FirebaseUser currentUser;
     private FirebaseAuth mAuth;
-
+    android.app.AlertDialog.Builder builder2;
+    AlertDialog aler2;
     adapterHistorial mydadepter;
 EditText etbuscarnombre;
     // TODO: Rename and change types and number of parameters
@@ -155,7 +161,8 @@ EditText etbuscarnombre;
                 mydadepter.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        String dscricon =listaHistrial.get(recyclerView.getChildAdapterPosition(v)).getDescripcion();
+                        DialogoDetalle(dscricon);
                         //   int cantidad=adapter.selecciondaos();
                         /// Toast.makeText(AlumnosSalon.this, String.valueOf(cantidad), Toast.LENGTH_SHORT).show();
                     }
@@ -170,4 +177,33 @@ EditText etbuscarnombre;
         });
 
     }
+
+    private void DialogoDetalle(String desricion){
+        builder2 = new AlertDialog.Builder(getActivity());
+        Button btcerrrar,btnterminar;
+        TextView tvestado,ttxdescricion;
+        // EditText etedescripcion;
+        View v = LayoutInflater.from(getActivity()).inflate(R.layout.dialogo_detallecita, null);
+
+        builder2.setView(v);
+
+        ttxdescricion=(TextView) v.findViewById(R.id.idetdescripcion2);
+        btcerrrar=(Button)v.findViewById(R.id.idbtncerrardialogo3);
+        tvestado=(TextView)v.findViewById(R.id.idestado3);
+        //  btnterminar=(Button)v.findViewById(R.id.idbtnterminar);
+
+        tvestado.setText("Detalle Cita..");
+        ttxdescricion.setText(desricion);
+        btcerrrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                aler2.dismiss();
+            }
+        });
+
+        aler2  = builder2.create();
+        aler2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        aler2.show();
+    }
+
 }

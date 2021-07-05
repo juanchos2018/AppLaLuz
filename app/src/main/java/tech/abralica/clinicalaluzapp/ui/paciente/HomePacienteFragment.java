@@ -7,12 +7,14 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +27,14 @@ import com.airbnb.lottie.LottieProperty;
 import com.airbnb.lottie.model.KeyPath;
 import com.airbnb.lottie.value.LottieFrameInfo;
 import com.airbnb.lottie.value.SimpleLottieValueCallback;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import tech.abralica.clinicalaluzapp.R;
 import tech.abralica.clinicalaluzapp.ui.actiity.ReservarCitaActivity;
@@ -43,6 +53,11 @@ public class HomePacienteFragment extends Fragment {
     android.app.AlertDialog.Builder builder2;
     AlertDialog aler2;
 
+    private FirebaseAuth mAuth;
+    public FirebaseUser currentUser;
+
+    private DatabaseReference userDatabaseReference;
+
 
     @Nullable
     @Override
@@ -57,10 +72,10 @@ public class HomePacienteFragment extends Fragment {
         SharedPreferences sharedPref = requireContext().getSharedPreferences("usuario",
                 Context.MODE_PRIVATE);
 
-        String nombre = sharedPref.getString("nombres", "nombres");
+       // String nombre = sharedPref.getString("nombres", "nombres");
 
         tvPaciente = requireView().findViewById(R.id.home_tv_paciente);
-        tvPaciente.setText(String.format("Bienvenido %s!", nombre));
+
 
         bReservar = requireView().findViewById(R.id.fph_ll_reservar);
         bReservar.setOnClickListener(view1 ->
@@ -90,6 +105,37 @@ public class HomePacienteFragment extends Fragment {
                 MostrrMensje();
             }
         });
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null){
+            final String  user_uID = mAuth.getCurrentUser().getUid();
+            final String  correo = mAuth.getCurrentUser().getEmail();
+
+            userDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Paciente").child(user_uID);
+            userDatabaseReference.keepSynced(true);
+            userDatabaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                    try {
+                        String nombreprofe = dataSnapshot.child("nombres").getValue().toString();
+                        tvPaciente.setText(String.format("Bienvenido %s!", nombreprofe));
+
+                    }catch (Exception ex){
+                        Toast.makeText(getActivity(),"Ocurrio un error", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Log.e("error  ", "error 7");
+                }
+            });
+        }
+
+
 
     }
 

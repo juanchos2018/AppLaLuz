@@ -171,7 +171,7 @@ public class GestionarCitasFragment extends Fragment {
         progressDialog.setTitle("Eliinando");
         progressDialog.show();
         progressDialog.setCancelable(false);
-        referenceCitas2 = FirebaseDatabase.getInstance().getReference("CitasReservadas").child(user_id).child(key);
+        referenceCitas2 = FirebaseDatabase.getInstance().getReference("CitasReservadas").child(key);
         referenceCitas2.removeValue().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(getActivity(), "Eliminado ", Toast.LENGTH_SHORT).show();

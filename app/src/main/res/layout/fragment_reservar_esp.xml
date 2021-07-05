@@ -65,13 +65,8 @@
         </ImageView>
     </LinearLayout>
 
-    <TextView
-        android:text="Elija una especialidad"
-        android:layout_marginBottom="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

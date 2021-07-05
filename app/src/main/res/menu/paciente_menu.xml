@@ -17,7 +17,7 @@
     <item
         android:id="@+id/nav_historial_medico"
         android:icon="@drawable/ic_list"
-        android:title="@string/nav_historial_medico" />
+        android:title="Mi Historial" />
     <item
         android:id="@+id/nav_perfil_paciente"
         android:icon="@drawable/ic_profile"
