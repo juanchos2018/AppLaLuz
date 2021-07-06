@@ -143,7 +143,7 @@ public class RegistroPacienteActivity extends AppCompatActivity {
                                     reference.child("celular").setValue(celular);
                                     reference.child("email").setValue(email);
                                     reference.child("token").setValue("token");
-                                    reference.child("tipousuario").setValue("paciente");
+                                    reference.child("tipousuario").setValue("Paciente");
                                     reference.child("fotoPerfil").setValue("default_image").addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull @NotNull Task<Void> task) {

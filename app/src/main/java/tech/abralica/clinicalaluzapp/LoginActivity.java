@@ -151,7 +151,6 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this,"vsita login "+ tipo, Toast.LENGTH_SHORT).show();
                                 if (tipo.equals(Nodo)){
 
-
                                     SharedPreferences preferences= getSharedPreferences("mitokenUser", Context.MODE_PRIVATE);
                                     String token=preferences.getString("token","no existe");
 
@@ -165,7 +164,7 @@ public class LoginActivity extends AppCompatActivity {
                                   //  rol = sharedPref.getString("tipoUsuario", "tipoUsuario");
 
 
-                                  //  referenceUsuarios.child("token").setValue(token);
+                                    referenceUsuarios.child("token").setValue(token);
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     Bundle bundle = new Bundle();
                                     bundle.putString("tipousu",Nodo);
@@ -176,13 +175,13 @@ public class LoginActivity extends AppCompatActivity {
                                     finish();
 
                                 }else{
-                                    Toast.makeText(LoginActivity.this, "tu usarion no es el indicado", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "tu usario no es el indicado", Toast.LENGTH_SHORT).show();
 
                                     progressDialog.dismiss();
                                 }
                             }else
                             {
-                                Toast.makeText(LoginActivity.this, "tu usarion no es el indicado", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "tu usario no existe", Toast.LENGTH_SHORT).show();
 
                                 progressDialog.dismiss();
                             }
@@ -190,7 +189,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         @Override
                         public void onCancelled(@NonNull @NotNull DatabaseError databaseError) {
-
+                            Toast.makeText(LoginActivity.this, "msg "+ databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
